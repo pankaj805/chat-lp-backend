@@ -47,12 +47,12 @@ app.post('/message', function(req, res){
 })
 
 
-// app.delete('/messages',(req,res,next)=>{
-//     messages = [];
-//     res.status(200).send({
-//         status:true
-//     });
-// });
+app.delete('/messages',(req,res,next)=>{
+    messages = [];
+    res.status(200).send({
+        status:true
+    });
+});
 
 app.listen(PORT,()=>{
     console.log(' ********** : running on ',PORT);
