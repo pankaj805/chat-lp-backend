@@ -3,6 +3,8 @@ import bodyParser from 'body-parser';
 import EventEmitter from 'events';
 import cors from "cors";
 
+const PORT = process.env.PORT || 5000;
+
 let ee = new EventEmitter();
 ee.setMaxListeners(400);
 let messages = [];
@@ -52,8 +54,8 @@ app.post('/message', function(req, res){
 //     });
 // });
 
-app.listen(30006,()=>{
-    console.log(' ********** : running on 30006');
+app.listen(PORT,()=>{
+    console.log(' ********** : running on ',PORT);
 })
 
 module.exports = app;
